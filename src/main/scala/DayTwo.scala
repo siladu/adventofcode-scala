@@ -9,7 +9,7 @@ object DayTwo {
   val partOne = {
     matrix.map(c => c.max - c.min).sum
   }
-  
+
   val partTwo = {
 
     def findDivisible(row: Seq[Int]): Int = {
