@@ -1,6 +1,6 @@
 import scala.io.Source
 
-object DaySeven {
+object Day7 {
 
   val testInput = """pbga (66)
 xhth (57)
