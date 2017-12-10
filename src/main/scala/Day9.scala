@@ -24,9 +24,9 @@ object Day9 {
     print(if (chars.isEmpty) ' ' else chars.head)
 
     if (chars.isEmpty) Nil
-    else if (chars.head.equals('<')) { if (!start) increment; processGarbage(chars.tail, chars.head) }
+    else if (chars.head.equals('<') && !prev.equals('!')) { if (!start) increment; processGarbage(chars.tail, chars.head) }
     else if (chars.head.equals('!') && prev.equals('!')) processGarbage(chars.tail, '-')
-    else if (chars.head.equals('>') && !prev.equals('!')) { println(s"\n= $currentGarbage, total = $totalGarbageCount"); chars.tail }
+    else if (chars.head.equals('>') && !prev.equals('!')) { println(s"\ncurrentGarbage count = $currentGarbage, totalGarbageCount = $totalGarbageCount"); chars.tail }
     else { if (!chars.head.equals('!') && !prev.equals('!')) increment; processGarbage(chars.tail, chars.head) }
   }
 
